@@ -1,4 +1,4 @@
-# Mezbaan Multinational Cuisine Website PKIN
+# Mezbaan Multinational Cuisine Website 🇵🇰🇮🇳
 
 A stunning, responsive landing page built with **HTML5, CSS3, and Vanilla JavaScript** for Mezbaan Multinational Cuisine. This website serves as a digital menu and storefront for the authentic Indian and Pakistani restaurant located in Mangere, Auckland.
 
