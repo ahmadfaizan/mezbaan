@@ -435,13 +435,30 @@
       .menu-item {
         background: var(--white);
         border-radius: 12px;
-        padding: 1.2rem 1.4rem;
         border: 1px solid var(--border);
+        overflow: hidden;
         transition: box-shadow 0.2s, transform 0.2s;
+        display: flex;
+        flex-direction: column;
       }
       .menu-item:hover {
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
         transform: translateY(-2px);
+      }
+
+      .menu-item-image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        display: block;
+        background: linear-gradient(135deg, var(--gold-light), #f0e3d0);
+      }
+
+      .menu-item-content {
+        padding: 1.2rem 1.4rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
       }
 
       .menu-item-header {
@@ -1187,129 +1204,159 @@
         <div class="menu-section active" id="tab-appetizers">
           <div class="menu-grid">
             <div class="menu-item">
-              <div class="menu-item-header">
-                <span class="menu-item-name">Onion Bhaji</span>
-                <span class="menu-item-price">$7.00</span>
+              <img src="https://images.unsplash.com/photo-1599599810694-b5ac4dd0b61f?w=400&h=300&fit=crop" alt="Onion Bhaji" class="menu-item-image" />
+              <div class="menu-item-content">
+                <div class="menu-item-header">
+                  <span class="menu-item-name">Onion Bhaji</span>
+                  <span class="menu-item-price">$7.00</span>
+                </div>
+                <p class="menu-item-desc">
+                  Julienne cut onion with chickpea flour, deep fried golden brown,
+                  with sweet and sour tamarind chutney
+                </p>
               </div>
-              <p class="menu-item-desc">
-                Julienne cut onion with chickpea flour, deep fried golden brown,
-                with sweet and sour tamarind chutney
-              </p>
             </div>
             <div class="menu-item">
-              <div class="menu-item-header">
-                <span class="menu-item-name"
-                  >Vegetable Samosa
-                  <small style="font-weight: 400; color: var(--muted)"
-                    >(per piece)</small
-                  ></span
-                >
-                <span class="menu-item-price">$1.50</span>
+              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&h=300&fit=crop" alt="Vegetable Samosa" class="menu-item-image" />
+              <div class="menu-item-content">
+                <div class="menu-item-header">
+                  <span class="menu-item-name"
+                    >Vegetable Samosa
+                    <small style="font-weight: 400; color: var(--muted)"
+                      >(per piece)</small
+                    ></span
+                  >
+                  <span class="menu-item-price">$1.50</span>
+                </div>
+                <p class="menu-item-desc">
+                  Triangular pastry filled with potatoes, peas and herbs, fried
+                  golden brown, with tamarind chutney
+                </p>
               </div>
-              <p class="menu-item-desc">
-                Triangular pastry filled with potatoes, peas and herbs, fried
-                golden brown, with tamarind chutney
-              </p>
             </div>
             <div class="menu-item">
-              <div class="menu-item-header">
-                <span class="menu-item-name"
-                  >Paneer Pakora
-                  <small style="font-weight: 400; color: var(--muted)"
-                    >(6 pieces)</small
-                  ></span
-                >
-                <span class="menu-item-price">$18.00</span>
+              <img src="https://images.unsplash.com/photo-1599599810694-b5ac4dd0b61f?w=400&h=300&fit=crop" alt="Paneer Pakora" class="menu-item-image" />
+              <div class="menu-item-content">
+                <div class="menu-item-header">
+                  <span class="menu-item-name"
+                    >Paneer Pakora
+                    <small style="font-weight: 400; color: var(--muted)"
+                      >(6 pieces)</small
+                    ></span
+                  >
+                  <span class="menu-item-price">$18.00</span>
+                </div>
+                <p class="menu-item-desc">
+                  Pieces of cottage cheese coated in chickpea flour and deep
+                  fried, with tamarind chutney
+                </p>
               </div>
-              <p class="menu-item-desc">
-                Pieces of cottage cheese coated in chickpea flour and deep
-                fried, with tamarind chutney
-              </p>
             </div>
             <div class="menu-item">
-              <div class="menu-item-header">
-                <span class="menu-item-name"
-                  >Paneer Tikka
-                  <small style="font-weight: 400; color: var(--muted)"
-                    >(4 pieces)</small
-                  ></span
-                >
-                <span class="menu-item-price">$18.00</span>
+              <img src="https://images.unsplash.com/photo-1599599810694-b5ac4dd0b61f?w=400&h=300&fit=crop" alt="Paneer Tikka" class="menu-item-image" />
+              <div class="menu-item-content">
+                <div class="menu-item-header">
+                  <span class="menu-item-name"
+                    >Paneer Tikka
+                    <small style="font-weight: 400; color: var(--muted)"
+                      >(4 pieces)</small
+                    ></span
+                  >
+                  <span class="menu-item-price">$18.00</span>
+                </div>
+                <p class="menu-item-desc">
+                  Cottage cheese marinated overnight in spiced yoghurt and roasted
+                  in tandoor oven, with mint chutney
+                </p>
               </div>
-              <p class="menu-item-desc">
-                Cottage cheese marinated overnight in spiced yoghurt and roasted
-                in tandoor oven, with mint chutney
-              </p>
             </div>
             <div class="menu-item">
-              <div class="menu-item-header">
-                <span class="menu-item-name">Chicken Tikka</span>
-                <span class="menu-item-price">$13.00 / $22.00</span>
+              <img src="https://images.unsplash.com/photo-1599599810694-b5ac4dd0b61f?w=400&h=300&fit=crop" alt="Chicken Tikka" class="menu-item-image" />
+              <div class="menu-item-content">
+                <div class="menu-item-header">
+                  <span class="menu-item-name">Chicken Tikka</span>
+                  <span class="menu-item-price">$13.00 / $22.00</span>
+                </div>
+                <p class="menu-item-desc">
+                  Boneless chicken in spiced yoghurt with herbs, roasted in
+                  tandoor oven, with mint chutney
+                </p>
               </div>
-              <p class="menu-item-desc">
-                Boneless chicken in spiced yoghurt with herbs, roasted in
-                tandoor oven, with mint chutney
-              </p>
             </div>
             <div class="menu-item">
-              <div class="menu-item-header">
-                <span class="menu-item-name">Garlic Tikka</span>
-                <span class="menu-item-price">$13.00 / $22.00</span>
+              <img src="https://images.unsplash.com/photo-1599599810694-b5ac4dd0b61f?w=400&h=300&fit=crop" alt="Garlic Tikka" class="menu-item-image" />
+              <div class="menu-item-content">
+                <div class="menu-item-header">
+                  <span class="menu-item-name">Garlic Tikka</span>
+                  <span class="menu-item-price">$13.00 / $22.00</span>
+                </div>
+                <p class="menu-item-desc">
+                  Smoky, garlic chicken grilled to perfection, served with cool
+                  mint chutney
+                </p>
               </div>
-              <p class="menu-item-desc">
-                Smoky, garlic chicken grilled to perfection, served with cool
-                mint chutney
-              </p>
             </div>
             <div class="menu-item">
-              <div class="menu-item-header">
-                <span class="menu-item-name">Tandoori Chicken</span>
-                <span class="menu-item-price">$14.00 / $22.00</span>
+              <img src="https://images.unsplash.com/photo-1599599810694-b5ac4dd0b61f?w=400&h=300&fit=crop" alt="Tandoori Chicken" class="menu-item-image" />
+              <div class="menu-item-content">
+                <div class="menu-item-header">
+                  <span class="menu-item-name">Tandoori Chicken</span>
+                  <span class="menu-item-price">$14.00 / $22.00</span>
+                </div>
+                <p class="menu-item-desc">
+                  Chicken marinated overnight in spiced yoghurt, then roasted in
+                  tandoor oven
+                </p>
               </div>
-              <p class="menu-item-desc">
-                Chicken marinated overnight in spiced yoghurt, then roasted in
-                tandoor oven
-              </p>
             </div>
             <div class="menu-item">
-              <div class="menu-item-header">
-                <span class="menu-item-name"
-                  >Chicken / Paneer 65
-                  <small style="font-weight: 400; color: var(--muted)"
-                    >(Med/Hot)</small
-                  ></span
-                >
-                <span class="menu-item-price">$18.00</span>
+              <img src="https://images.unsplash.com/photo-1599599810694-b5ac4dd0b61f?w=400&h=300&fit=crop" alt="Chicken / Paneer 65" class="menu-item-image" />
+              <div class="menu-item-content">
+                <div class="menu-item-header">
+                  <span class="menu-item-name"
+                    >Chicken / Paneer 65
+                    <small style="font-weight: 400; color: var(--muted)"
+                      >(Med/Hot)</small
+                    ></span
+                  >
+                  <span class="menu-item-price">$18.00</span>
+                </div>
+                <p class="menu-item-desc">
+                  Crispy, spicy South Indian-style bites tossed in a fiery sauce —
+                  perfect with mint chutney
+                </p>
               </div>
-              <p class="menu-item-desc">
-                Crispy, spicy South Indian-style bites tossed in a fiery sauce —
-                perfect with mint chutney
-              </p>
             </div>
             <div class="menu-item">
-              <div class="menu-item-header">
-                <span class="menu-item-name"
-                  >Amritsari Fish
-                  <small style="font-weight: 400; color: var(--muted)"
-                    >(Med/Hot)</small
-                  ></span
-                >
-                <span class="menu-item-price">$14.00 / $22.00</span>
+              <img src="https://images.unsplash.com/photo-1599599810694-b5ac4dd0b61f?w=400&h=300&fit=crop" alt="Amritsari Fish" class="menu-item-image" />
+              <div class="menu-item-content">
+                <div class="menu-item-header">
+                  <span class="menu-item-name"
+                    >Amritsari Fish
+                    <small style="font-weight: 400; color: var(--muted)"
+                      >(Med/Hot)</small
+                    ></span
+                  >
+                  <span class="menu-item-price">$14.00 / $22.00</span>
+                </div>
+                <p class="menu-item-desc">
+                  Crispy, deep-fried fish marinated in zesty spices —
+                  Punjabi-style perfection with mint chutney
+                </p>
               </div>
-              <p class="menu-item-desc">
-                Crispy, deep-fried fish marinated in zesty spices —
-                Punjabi-style perfection with mint chutney
-              </p>
             </div>
             <div class="menu-item">
-              <div class="menu-item-header">
-                <span class="menu-item-name">Fish Tikka</span>
-                <span class="menu-item-price">$20.00</span>
+              <img src="https://images.unsplash.com/photo-1599599810694-b5ac4dd0b61f?w=400&h=300&fit=crop" alt="Fish Tikka" class="menu-item-image" />
+              <div class="menu-item-content">
+                <div class="menu-item-header">
+                  <span class="menu-item-name">Fish Tikka</span>
+                  <span class="menu-item-price">$20.00</span>
+                </div>
+                <p class="menu-item-desc">
+                  Fish marinated in yoghurt and spices, chargrilled to smoky,
+                  flavourful perfection
+                </p>
               </div>
-              <p class="menu-item-desc">
-                Fish marinated in yoghurt and spices, chargrilled to smoky,
-                flavourful perfection
-              </p>
             </div>
           </div>
         </div>
