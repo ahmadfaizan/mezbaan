@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -157,7 +157,8 @@
         content: '';
         position: absolute;
         inset: 0;
-        background: radial-gradient(
+        background:
+          radial-gradient(
             ellipse 60% 80% at 50% 50%,
             rgba(192, 57, 43, 0.15) 0%,
             transparent 70%
@@ -229,7 +230,9 @@
         font-weight: 600;
         font-size: 0.95rem;
         text-decoration: none;
-        transition: background 0.2s, transform 0.15s;
+        transition:
+          background 0.2s,
+          transform 0.15s;
         display: inline-block;
       }
       .btn-primary:hover {
@@ -246,7 +249,10 @@
         font-size: 0.95rem;
         text-decoration: none;
         border: 2px solid var(--gold);
-        transition: background 0.2s, color 0.2s, transform 0.15s;
+        transition:
+          background 0.2s,
+          color 0.2s,
+          transform 0.15s;
         display: inline-block;
       }
       .btn-secondary:hover {
@@ -342,7 +348,9 @@
         border-radius: 16px;
         background: var(--cream);
         border: 1px solid var(--border);
-        transition: transform 0.25s, box-shadow 0.25s;
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s;
       }
       .feature-card:hover {
         transform: translateY(-6px);
@@ -437,7 +445,9 @@
         border-radius: 12px;
         padding: 1.2rem 1.4rem;
         border: 1px solid var(--border);
-        transition: box-shadow 0.2s, transform 0.2s;
+        transition:
+          box-shadow 0.2s,
+          transform 0.2s;
       }
       .menu-item:hover {
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
@@ -892,7 +902,9 @@
         font-weight: 600;
         font-size: 0.88rem;
         text-decoration: none;
-        transition: opacity 0.2s, transform 0.15s;
+        transition:
+          opacity 0.2s,
+          transform 0.15s;
       }
       .event-btn:hover {
         opacity: 0.88;
@@ -941,7 +953,9 @@
       .reveal {
         opacity: 0;
         transform: translateY(24px);
-        transition: opacity 0.6s, transform 0.6s;
+        transition:
+          opacity 0.6s,
+          transform 0.6s;
       }
       .reveal.visible {
         opacity: 1;
@@ -1002,7 +1016,9 @@
     <section class="hero" id="home">
       <div class="hero-content">
         <div class="hero-badge">
-          <img src="assets/halal-logo.png" alt="Halal Certified" style="width: 14px; height: 14px; border-radius: 50%;" />
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+            <circle cx="6" cy="6" r="5" />
+          </svg>
           Halal Certified · Auckland, NZ
         </div>
         <h1>Mezbaan<br /><span>Multinational</span><br />Cuisine</h1>
@@ -1056,7 +1072,16 @@
             Open Daily
           </span>
           <span class="hero-pill">
-            <img src="assets/halal-logo.png" alt="Halal Certified" style="width: 14px; height: 14px; border-radius: 50%;" />
+            <svg
+              width="14"
+              height="14"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
             Halal Certified
           </span>
         </div>
@@ -1084,8 +1109,15 @@
             </p>
           </div>
           <div class="feature-card">
-            <div class="feature-icon" style="background: none; overflow: hidden;">
-              <img src="assets/halal-logo.png" alt="Halal Certified" style="width: 100%; height: 100%; object-fit: cover;" />
+            <div
+              class="feature-icon"
+              style="background: none; overflow: hidden"
+            >
+              <img
+                src="assets/halal-logo.png"
+                alt="Halal Certified"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
             </div>
             <h3>Halal Certified</h3>
             <p>
@@ -2264,7 +2296,11 @@
               </div>
             </div>
             <div class="halal-badge" style="margin-top: 0.5rem">
-              <img src="assets/halal-logo.png" alt="Halal Certified" style="width: 16px; height: 16px; border-radius: 50%;" />
+              <img
+                src="assets/halal-logo.png"
+                alt="Halal Certified"
+                style="width: 16px; height: 16px; border-radius: 50%"
+              />
               Halal Certified
             </div>
           </div>
@@ -2350,7 +2386,7 @@
             }
           });
         },
-        { threshold: 0.1 }
+        { threshold: 0.1 },
       );
       document
         .querySelectorAll('.reveal')
