@@ -1,6 +1,11 @@
 # Regenerates the menu in index.html whenever menu.json changes on main,
 # and commits the result. Cloudflare then deploys that commit like any other
 # push to main.
+#
+# main has a "changes must be made through a pull request" ruleset, which
+# the default GITHUB_TOKEN can't bypass on a personal repo. So the commit is
+# pushed with the "menu-bot" deploy key (secret MENU_BOT_DEPLOY_KEY), and
+# deploy keys are on that ruleset's bypass list.
 name: Build menu
 
 on:
@@ -9,10 +14,11 @@ on:
     paths:
       - menu.json
       - scripts/build-menu.mjs
+      - .github/workflows/build-menu.yml
   workflow_dispatch:
 
 permissions:
-  contents: write # needed to push the regenerated index.html
+  contents: read # pushing uses the deploy key, not GITHUB_TOKEN
 
 # Queue runs instead of racing if menu.json is pushed several times quickly.
 concurrency:
@@ -28,6 +34,7 @@ jobs:
           # Latest tip of the branch, not the triggering commit, so the push
           # below doesn't get rejected if someone pushed in the meantime.
           ref: ${{ github.ref }}
+          ssh-key: ${{ secrets.MENU_BOT_DEPLOY_KEY }}
 
       - name: Generate menu from menu.json
         run: node scripts/build-menu.mjs
