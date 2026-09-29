@@ -5,7 +5,7 @@ name: Build menu
 
 on:
   push:
-    branches: [main, auto-generate-menu] # TEMP: branch trigger for end-to-end test, remove before merge
+    branches: [main]
     paths:
       - menu.json
       - scripts/build-menu.mjs
