@@ -32,5 +32,30 @@ This is a static website. You can view it immediately:
 1.  **Option A:** Open the `index.html` file directly in your web browser.
 2.  **Option B:** Clone this repository and serve it using a simple local server (e.g., VS Code Live Server, Python `http.server`, or PHP built-in server).
 
+## 🍛 Updating the Menu
+
+The menu on the website is generated from **`menu.json`** — edit that file, not the menu HTML in `index.html`.
+
+1. Edit `menu.json` (on GitHub, click the file → ✏️ pencil icon) and commit to `main`.
+2. The **Build menu** GitHub Action regenerates the menu in `index.html` and commits it (about 30 seconds). Check its status under the repo's **Actions** tab.
+3. Cloudflare deploys that commit automatically.
+
+If the Action fails (red ✖ in the Actions tab), `menu.json` has a mistake — the log says what and where, e.g. `menu.json is not valid JSON (around line 16)`. The website stays unchanged until it's fixed.
+
+**Item fields** (only `name` is required):
+
+| Field | Example | Shown as |
+|---|---|---|
+| `name` | `"Paneer Tikka"` | Item name |
+| `note` | `"4 pieces"` | Grey text after the name: *(4 pieces)* |
+| `price` | `18.0` or `{"regular": 13.0, "large": 22.0}` | `$18.00` or `$13.00 / $22.00` |
+| `priceSuffix` | `"each"` | `$1.50 each` |
+| `description` | `"Cottage cheese marinated…"` | Text under the name |
+| `badge` | `"Chef's Special"`, `"Vegetarian"` or `"Spicy"` | Coloured label above the name |
+
+**Sections** have an `id` (lowercase, used for the tab), a `title` (tab label), and either `items` or `subsections` (each with a `title` and `items`). Optional: `note` (e.g. *Large size +$6.00 additional*) and `pricing` (the Lamb/Chicken price banner on Non-Veg Mains). Section order in the file = tab order on the site.
+
+To preview locally, run `node scripts/build-menu.mjs` and open `index.html`.
+
 ## 🗂️ Project Structure
 
